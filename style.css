@@ -1,63 +1,77 @@
-html {
-    scroll-behavior: smooth;
+
+
+html { 
+    scroll-behavior: smooth; 
 }
-body > div{
+body > div {
     transform: translate3d(0,0,0);
     -webkit-transform: translate3d(0,0,0);
     -webkit-overflow-scrolling: touch;
 }
 body{
     -webkit-overflow-scrolling: touch;
-    
-    background: rgb(225, 237, 250);
-    background: linear-gradient(90deg, rgb(210, 228, 247) 0%, rgb(252, 229, 239) 100%);
+    font-family: 'Nunito', sans-serif;
+    /* background-image: linear-gradient(to bottom right , #dad7e7,#d5d3e1); */
+    /* background-image: url('https://cdn.shopify.com/s/files/1/0575/0987/1774/files/3_a30a55b4-0340-4c38-8e2a-8c7be4f409ba.png?v=1653967370'); */
+    background: rgb(225,237,250);
+background: linear-gradient(90deg, rgb(210, 228, 247) 0%, rgb(252, 229, 239) 100%);
+
 }
-body ::-webkit-scrollbar{
+body::-webkit-scrollbar {
     width: 5px;
     height: 5px;
     background-color: #ffffff;
     margin-bottom: 300px;
     border-radius: 20px;
-}
-body::-webkit-scrollbar-button{
+} 
+
+body::-webkit-scrollbar-button {
     height: 5px;
 }
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
     margin-top: 10px;
     margin-bottom: 60px;
 }
-body::-webkit-scrollbar-thumb{
+
+body::-webkit-scrollbar-thumb {
     height: 10px;
     border-radius: 20px;
-    margin-top: 300px;
+    margin-bottom: 300px;
     background-color: #c4bbbb;
 }
-.recentPlayed::-webkit-scrollbar{
+.recentPlayed::-webkit-scrollbar {
     height: 5px;
     background-color: #efeff8;
-    margin-top: 300px;
-    border-radius: 20px;
-}
-.recentPlayed::-webkit-scrollbar-thumb{
+    margin-bottom: 300px;
+    border-radius: 20px
+} 
+
+.recentPlayed::-webkit-scrollbar-thumb {
     height: 5px;
     border-radius: 20px;
-    margin-top: 300px;
+    margin-bottom: 300px;
     background-color: #a9a6a6;
     width: 10px;
 }
 .allPage{
+    /* background-color: #e4e3ec; */
     border-radius: 20px;
     padding: 20px;
+    /* background-image: linear-gradient(to bottom right , #dad7e7,#ffffff); */
+    /* backdrop-filter:blur(1.5rem) brightness(100%); */
     backdrop-filter: blur(60px);
     margin-bottom: 80px;
+
 }
 .main{
     display: flex;
     justify-content: center;
+    
 }
-/* leftBar */
+
+/* leftbar */
 .leftBar{
-    margin-top: 35px;
+    margin-right: 35px;
 }
 .leftBar_title{
     margin: 10px 0;
@@ -65,41 +79,44 @@ body::-webkit-scrollbar-thumb{
 .leftBar_title2{
     color: #5f5f5f;
 }
-.leftBar_recomment-item i {
+.leftBar_recommend-item i{
     margin-right: 5px;
 }
-.leftBar_recomment-item3 i{
+
+.leftBar_recommend-item .item3 i{
     margin-right: 10px;
 }
-.leftBar_recomment-item{
-    margin: 20px 0 ;
+.leftBar_recommend-item{
+    margin: 20px 0;
 }
-.leftBar_recomment-item:hover{
+.leftBar_recommend-item:hover {
     color: #895dd9;
     cursor: pointer;
     font-weight: 550;
 }
-.leftBar_myMusic-item{
+.leftBar_mymusic-item{
     margin: 20px 0;
 }
-.leftBar_myMusic-item:hover{
+.leftBar_mymusic-item:hover{
     color: #895dd9;
     cursor: pointer;
 }
 .leftBar_playlist-item:hover{
     color: #895dd9;
-    cursor: pointer;
+    cursor: pointer;   
 }
 li{
     list-style: none;
 }
+
 /* container */
 .container{
     background-color: #efeff8;
     border-radius: 20px;
-    box-shadow: 0px 6px 15px rgba(0, 0,0,0.15);
+    box-shadow:0px 6px 15px rgba(0,0,0,0.15);
     padding: 25px;
     width: 720px;
+    /* backdrop-filter: blur(40px); */
 }
 .search{
     background-color: white;
@@ -118,7 +135,7 @@ li{
     overflow-y: scroll;
     height: 250px;
 }
-.topMusic_item--song::-webkit-scrollbar{
+.topMusic_item--song::-webkit-scrollbar {
     display: none;
 }
 .topSong{
@@ -132,7 +149,7 @@ li{
 .topSong_clicked{
     background-color: white;
 }
-.topSong:hover {
+.topSong:hover{
     cursor: pointer;
     background-color: #ffffff;
     border-radius: 15px;
@@ -141,65 +158,63 @@ li{
 @keyframes fadein{
     from {
         opacity: 0;
-    }
-    to{
+    } to {
         opacity: 1;
     }
 }
-.topMusicLeft {
+.topMusicLeft{
     display: flex;
 }
-
-.topSong_love {
+.topSong_love{
     margin: 0 15px;
     font-weight: 700;
     margin-top: 10px;
 }
-
-.topSong_rank {
+.topSong_rank{
     color: #c6c7d2;
     font-weight: 700;
     margin-top: 10px;
 }
-
-.topSong_time {
+.topSong_time{
     color: #c4c4d5;
 }
-
-.topSong_name-nameSong {
+.topSong_name-nameSong{
     font-weight: 700;
 }
-
-.topSong_name-artist {
+.topSong_name-artist{
     font-size: 0.9rem;
 }
-.topMusic--img--thumb{
+
+.topMusic_item--img--thumb{
     width: 250px;
     height: 250px;
     border-radius: 20px;
     object-fit: cover;
     transition: 0.3s;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    box-shadow:0px 6px 15px rgba(0,0,0,0.15);
+
+   
 }
-.rotatePause {
+.rotatePause{
     animation: 0.5s ease 0s 1 normal forwards running rotatePause;
     border-radius: 50% !important;
     transition: 0.3s;
 }
-
-.rotatePlay {
+.rotatePlay{
     animation: 10s linear 0s infinite normal none running rotatePlay;
     border-radius: 50% !important;
     transition: 0.3s;
 }
-@keyframes rotatePlay{
-    0%{
+@keyframes rotatePlay {
+    0% {
         transform: rotate(0deg);
     }
-    100%{
+
+    100% {
         transform: rotate(360deg);
     }
 }
+
 @keyframes rotatePause {
     0% {
         transform: rotate(360deg);
@@ -210,16 +225,17 @@ li{
     }
 }
 h3{
-   margin: 0; 
+    margin: 0;
 }
 .recentPlayed{
     margin-top: 10px;
     display: flex;
-    overflow-x: scroll;
-    scrollbar-color:#6969dd #e0e0e0 ;
+    overflow-x:scroll;
+    scrollbar-color: #6969dd #e0e0e0;
     scrollbar-width: thin;
     margin-bottom: 50px;
 }
+
 .recentPlayed_item{
     margin: 0 5px;
     width: 150px;
@@ -230,11 +246,15 @@ h3{
     cursor: pointer;
 }
 .recentPlayed_item-img_clicked{
-    box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 15px rgba(0,0,0,0.15);
     border-radius: 15px;
+    /* background-color: white; */
 }
 .recentPlayed_title{
     margin-top: 20px;
+}
+.recentPlayed_clicked{
+    background-color: white;
 }
 .recentPlayed_item-img{
     width: 150px;
@@ -244,7 +264,7 @@ h3{
 }
 .recentPlayed_item-nameSong{
     font-weight: 600;
-    margin: 5px 0 ;
+    margin: 5px 0;
     margin-left: 10px;
     font-size: 0.9rem;
 }
@@ -256,7 +276,7 @@ input{
     outline: none;
 }
 /* rightbar */
-.rightbar{
+.rightBar{
     margin-left: 20px;
 }
 .listArtist_title{
@@ -270,7 +290,7 @@ input{
     display: flex;
     margin: 10px 0;
     padding: 10px 12px;
-    border-right: 15px;
+    border-radius: 15px;
     min-width: 200px;
 }
 .listArtist_item:hover{
@@ -299,21 +319,24 @@ input{
     display: flex;
     margin: 10px 0;
     padding: 10px 12px;
-    border-radius: 12px;
+    border-radius: 15px;
+    /* background-color: #eeedf2; */
 }
 .anotherSong_item:hover{
+    
     cursor: pointer;
 }
 .anotherSong_item-clicked{
     background-color: white;
     border-radius: 15px;
+
 }
 .anotherSong_item-name{
     display: flex;
     flex-direction: column;
 }
-/* playbar */
-.playbar{
+/* playerbar */
+.playerBar{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -321,9 +344,10 @@ input{
     width: 100%;
     left: 0;
     bottom: 0px;
-    position: fixed;background: rgb(225, 237, 250);
-    background: linear-gradient(90deg, rgba(225, 237, 250, 1) 0%, rgba(247, 238, 242, 1) 100%);
-
+    position: fixed;
+    /* background-color: #e8ecf1; */
+    background: rgb(225,237,250);
+background: linear-gradient(90deg, rgba(225,237,250,1) 0%, rgba(247,238,242,1) 100%);
 }
 .rangeBar{
     margin-top: 0;
@@ -344,31 +368,33 @@ input{
 .durrTime{
     margin-top: 5px;
 }
-.playBar_item{
+.playerBar_item{
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
-.playBar_item-img--thumb{
+
+.playerBar_item-img--thumb{
     width: 50px;
     height: 50px;
     border-radius: 10px;
     object-fit: cover;
     margin-right: 20px;
 }
-.playBar_item-info{
+.playerBar_item-info{
     display: flex;
     margin: 5px 0 5px 20px;
     width: 300px;
 }
-.playBar_item-action{
+.playerBar_item-action{
     display: flex;
     margin-right: 100px;
     margin-top: 10px;
 }
 .pause{
     margin: 0 30px;
-    color: rgb(5,165,67);
+    color: rgb(5, 165, 67);
+
 }
 
 .pause:hover i{
@@ -378,32 +404,37 @@ input{
     border-radius: 50%;
     cursor: pointer;
 }
-.playBar_item-action--size:hover{
+.playerBar_item-action--size:hover{
     color: rgb(5, 165, 67);
     box-shadow: 0px 14px 15px rgba(0, 0, 0, 0.15);
     height: 10px;
     cursor: pointer;
 }
-.playBar_item-action--size{
+.playerBar_item-action--size{
     font-size: 1.4rem;
-    color:#3e4042;
+    color: #3e4042;
     margin-top: 5px;
     padding: 2px;
 }
-.playerBar_item-action--pausesize {
+.playerBar_item-action--pausesize{
     font-size: 2.1rem;
 }
-input[type='range'i]{
+input[type="range" i]{
     margin: 0;
 }
-.iconwavegif {
+.iconwavegif{
     height: 20px;
     width: 20px;
 }
-.playBar_item-vol--bar{
-
+.playerBar_item-vol{
+    display: flex;
+    margin-top: 15px;
+    margin-right: 10px;
 }
-.playBar_item-vol--icon{
+.playerBar_item-vol--bar{
+   
+}
+.playerBar_item-vol--icon{
     margin-right: 10px;
     margin-top: 3px;
     font-size: 1.2rem;
@@ -426,7 +457,7 @@ input[type=range]::-webkit-slider-thumb {
     margin-top: -5px;
     cursor: pointer
 }
-.playBar_item-name--nameSong{
+.playerBar_item-name--nameSong{
     font-weight: 700;
 }
 .listArtist_item-iconRunning{
@@ -442,6 +473,7 @@ input[type=range]::-webkit-slider-thumb {
 .anotherSong_item{
     border-radius: 15px;
 }
+
 .anotherSong_item:hover{
     background-color: white;
 }
@@ -466,7 +498,7 @@ input[type=range]::-webkit-slider-thumb {
     margin-left: 35px;
     font-size: 1.3rem;
 }
-#songBar:hover {
+#songBar:hover{
     height: 5px;
 }
 .progress-area {
@@ -477,15 +509,13 @@ input[type=range]::-webkit-slider-thumb {
     background: #ec2a2a;
     cursor: pointer;
 }
-
 .progress-area .progress-bar {
     height: inherit;
     position: relative;
     border-radius: inherit;
     background-color: green;
 }
-
-.progress-bar::before {
+.progress-bar::before{
     content: "";
     position: absolute;
     height: 8px;
@@ -500,114 +530,91 @@ input[type=range]::-webkit-slider-thumb {
     background: inherit;
     transition: opacity 0.2s ease;
 }
-
-.progress-area:hover .progress-bar::before {
+.progress-area:hover .progress-bar::before{
     opacity: 1;
     pointer-events: auto;
 }
-
-.replay:hover {
+.replay:hover{
     cursor: pointer;
 }
-
 @media only screen and (max-width: 46.1875em) {
-    .leftBar {
+    .leftBar{
         display: none;
     }
-
     /*.container{
         display: none;
     } */
-    .playerBar_item-name {
+    .playerBar_item-name{
         display: none;
     }
-
-    .playerBar_item-vol {
+    .playerBar_item-vol{
         display: none;
     }
-
-    .topMusic {
+    .topMusic{
         flex-direction: column;
         align-items: center;
     }
-
-    .main {
+    .main{
         flex-direction: column;
         padding-right: 30px;
     }
-
-    .recentPlayed {
+    .recentPlayed{
         display: none;
     }
-
-    .container {
+    .container{
         width: 100%;
         padding: 15px;
     }
-
-    .topMusic_item--song {
+    .topMusic_item--song{
         height: 260px;
         margin-left: 0;
     }
-
-    .listArtist {
+    .listArtist{
         display: none;
     }
-
-    .recentPlayed_title {
+    .recentPlayed_title{
         display: none;
     }
-
-    .listArtist_title {
+    .listArtist_title{
         display: none;
     }
-
     .playerBar_item {
         display: flex;
         width: 100%;
         justify-self: unset;
     }
-
-    .playerBar_item-info {
+    .playerBar_item-info{
         display: flex;
         margin-right: 5px;
         width: auto;
     }
-
-    .anotherSong {
-        height: 250px;
-        overflow: scroll;
+    .anotherSong{
+    height: 250px;
+    overflow: scroll;
     }
-
-    .anotherSong_title {
+    .anotherSong_title{
         margin-top: 20px;
     }
-
-    .topMusic_item--img--thumb {
+    .topMusic_item--img--thumb{
         margin-bottom: 15px;
     }
-
-    .rangeBar {
+    .rangeBar{
         width: 100%;
     }
-
-    .currTime {
+    .currTime{
         margin-left: 10px;
     }
-
-    .durrTime {
+    .durrTime{
         margin-right: 10px;
     }
 
 }
-
 input[type="range" i] {
     margin-top: 13px;
     margin-left: 10px;
     margin-right: 10px;
 }
-
-.seekbar {
+.seekbar{
     width: 100%;
     height: 2px;
     margin-top: 13px;
