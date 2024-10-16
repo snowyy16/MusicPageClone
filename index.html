@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Music Page Clone</title>
+    <title>Music Page Cute</title>
+
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link
@@ -18,154 +20,188 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="allPage" id="allPage">
+    <div id="allPage" class="allPage">
       <div class="main">
         <div class="leftBar">
           <h3 class="leftBar_title">
-            <i class="fa-solid fa-align-left"></i>MUSIC PAGE
+            <i class="fa-solid fa-align-left"></i> MUSIC PAGE
           </h3>
-        </div>
-        <div class="leftBar_Recommend">
-          <span class="leftBar_title2">Recommend</span>
-          <ul>
-            <li class="leftBar_recommend-item item1">For you</li>
-            <li class="leftBar_recommend-item item2">Library</li>
-            <li class="leftBar_recommend-item item3">Radio Station</li>
-            <li class="leftBar_recommend-item item4">Music Video</li>
-          </ul>
-        </div>
-        <div class="leftBar_mymusic">
-          <span class="leftBar_title2">My music</span>
-          <ul>
-            <li class="leftBar_mymusic-item">Liked song</li>
-            <li class="leftBar_mymusic-item">Album</li>
-            <li class="leftBar_mymusic-item">Artist</li>
-            <li class="leftBar_mymusic-item">Recent</li>
-          </ul>
-        </div>
-        <div class="leftBar_playlist">
-          <span class="leftBar_title2">Playlist</span>
-          <ul>
-            <li class="leftBar_playlist-item">Hip-hop</li>
-            <li class="leftBar_playlist-item">Jazz</li>
-          </ul>
-        </div>
-      </div>
-      <div class="container">
-        <header>
-          <div class="search">
-            <i class="fa-regular fa-manufying-glass"></i>
-            <input type="text" placeholder="Start search here" />
+          <div class="leftBar_recommend">
+            <span class="leftBar_title2">Recommend</span>
+            <ul>
+              <li class="leftBar_recommend-item item1">For you</li>
+              <li class="leftBar_recommend-item item2">Library</li>
+              <li class="leftBar_recommend-item item3">Radio Station</li>
+              <li class="leftBar_recommend-item item4">Music Video</li>
+            </ul>
           </div>
-          <div class="account"></div>
-        </header>
-        <h2 class="topMusic-title">Top song 2024</h2>
-        <div class="topMusic">
-          <div class="topMusic_item--img">
-            <img class="topMusic_item--img--thumb" alt="" />
+          <div class="leftBar_mymusic">
+            <span class="leftBar_title2">My music</span>
+            <ul>
+              <li class="leftBar_mymusic-item">Liked song</li>
+              <li class="leftBar_mymusic-item">Album</li>
+              <li class="leftBar_mymusic-item">Artist</li>
+              <li class="leftBar_mymusic-item">Recent</li>
+            </ul>
           </div>
-          <div class="topMusic_item--song"></div>
-        </div>
-        <h3 class="recentPlayed_title">Recent Played</h3>
-        <div class="recentPlayed-icon"></div>
-      </div>
-      <div class="rencnetPlayed">
-        <!-- source nhac -->
-      </div>
-      <h3 class="powered"></h3>
-    </div>
-    <div class="rightBar">
-      <h3 class="listArtist_title">Recent Singers</h3>
-      <div class="listArtist">
-        <!-- radiohead -->
-        <div class="listArtist_item" onclick="renderListMusicOf('Radiohead,0')">
-          <div class="listArtist_item-img">
-            <img class="listArtist_item-img" src="./img/radiohead.jfif" />
-          </div>
-          <div class="listArtist_item-name">
-            <span class="listArtist_item-nameSong">Radiohead</span>
-            <span class="listArtist_item-nameArtist">3 minutes ago</span>
-          </div>
-          <div class="listArtist_item-iconRunning">
-            <img src="" />
+          <div class="leftBar_playlist">
+            <span class="leftBar_title2">Playlist</span>
+            <ul>
+              <li class="leftBar_playlist-item">Hip-hop</li>
+              <li class="leftBar_playlist-item">Jazz</li>
+            </ul>
           </div>
         </div>
-        <!-- travis -->
-        <div class="listArtist_item" onclick="renderListMusicOf('Travis Scott,0')">
-          <div class="listArtist_item-img">
-            <img class="listArtist_item-img" src="./img/travis.jpg" />
+        <div class="container">
+          <header>
+            <div class="search">
+              <i class="fa-regular fa-magnifying-glass"></i>
+              <input type="text" placeholder="Start search here" />
+            </div>
+            <div class="account"></div>
+          </header>
+          <h2 class="topMusic-title">Top Song 2024</h2>
+          <div class="topMusic">
+            <div class="topMusic_item--img">
+              <img class="topMusic_item--img--thumb" alt="" />
+            </div>
+            <div class="topMusic_item--song"></div>
           </div>
-          <div class="listArtist_item-name">
-            <span class="listArtist_item-nameSong">Travis Scott</span>
-            <span class="listArtist_item-nameArtist">1 minutes ago</span>
-          </div>
-          <div class="listArtist_item-iconRunning">
-            <img src="" />
-          </div>
+          <h3 class="recentPlayed_title">Recent Played</h3>
+          <div class="recentPlayed-icon"></div>
+          <div class="recentPlayed"></div>
+          <h3 class="powered"></h3>
         </div>
-          <!-- 21 -->
-          <div class="listArtist_item" onclick="renderListMusicOf('21 Savage ,0')">
+        <div class="rightBar">
+          <h3 class="listArtist_title">Recent Singers</h3>
+          <div class="listArtist">
+            <div
+              class="listArtist_item"
+              onclick="renderListMusicOf('radiohead',0)"
+            >
               <div class="listArtist_item-img">
-                <img class="listArtist_item-img" src="./img/21.jfif" />
+                <img
+                  class="listArtist_item-img"
+                  src="./img/radiohead.jfif"
+                  alt=""
+                />
               </div>
               <div class="listArtist_item-name">
-                <span class="listArtist_item-nameSong">21 Savage</span>
-                <span class="listArtist_item-nameArtist">5 minutes ago</span>
+                <span class="listArtist_item-nameSong">Radiohead</span>
+                <span class="listArtist_item-nameArtist">3 minutes ago</span>
               </div>
-              <div class="listArtist_item-iconRunning">
-                <img src="" />
+              <div class="listArtist_item-iconRunning"><img src="" /></div>
             </div>
-        </div>
-        <!-- ocean -->
-         <div class="listArtist_item" onclick="renderListMusicOf('21 Savage ,0')">
+            <div
+              class="listArtist_item"
+              onclick="renderListMusicOf('travis',1)"
+            >
               <div class="listArtist_item-img">
-                <img class="listArtist_item-img" src="./img/ocen.webp" />
+                <img
+                  class="listArtist_item-img"
+                  src="./img/travis.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="listArtist_item-name">
+                <span class="listArtist_item-nameSong">Travis Scott</span>
+                <span class="listArtist_item-nameArtist">1 minutes ago</span>
+              </div>
+              <div class="listArtist_item-iconRunning"><img src="" /></div>
+            </div>
+            <div class="listArtist_item" onclick="renderListMusicOf('ocean',2)">
+              <div class="listArtist_item-img">
+                <img class="listArtist_item-img" src="./img/ocen.webp" alt="" />
               </div>
               <div class="listArtist_item-name">
                 <span class="listArtist_item-nameSong">Frank Ocean</span>
-                <span class="listArtist_item-nameArtist">3 minutes ago</span>
+                <span class="listArtist_item-nameArtist">4 minutes ago</span>
               </div>
-              <div class="listArtist_item-iconRunning">
-                <img src="" />
+              <div class="listArtist_item-iconRunning"><img src="" /></div>
             </div>
+            <div class="listArtist_item" onclick="renderListMusicOf('21s',3)">
+              <div class="listArtist_item-img">
+                <img class="listArtist_item-img" src="./img/21.jfif" alt="" />
+              </div>
+              <div class="listArtist_item-name">
+                <span class="listArtist_item-nameSong">21 Savage</span>
+                <span class="listArtist_item-nameArtist">2 minutes ago</span>
+              </div>
+              <div class="listArtist_item-iconRunning"><img src="" /></div>
+            </div>
+            <div class="listArtist_item" onclick="renderListMusicOf('juice',4)">
+              <div class="listArtist_item-img">
+                <img
+                  class="listArtist_item-img"
+                  src="./img/juice.webp"
+                  alt=""
+                />
+              </div>
+              <div class="listArtist_item-name">
+                <span class="listArtist_item-nameSong">Juice Wrld</span>
+                <span class="listArtist_item-nameArtist">6 minutes ago</span>
+              </div>
+              <div class="listArtist_item-iconRunning"><img src="" /></div>
+            </div>
+          </div>
+          <h3 class="anotherSong_title">Another songs</h3>
+          <div class="anotherSong"></div>
         </div>
-        <h3 class="anotherSong_title">Another songs</h3>
-        <div class="anotherong">
-            <!-- add more song -->
-        </div>
+      </div>
     </div>
   </body>
-  <div class="playBar">
-    <div class="rangebar">
-        <div class="currTime">
-            00:00
-        </div>
-        <input type="range" step="1" class="seekbar" value="0" oninput="handleSeekBar()">
-        <div class="durrTime">00:00</div>
+  <div class="playerBar">
+    <div class="rangeBar">
+      <div class="currTime">00:00</div>
+
+      <input
+        type="range"
+        step="1"
+        class="seekbar"
+        value="0"
+        oninput="handleSeekBar()"
+      />
+      <div class="durrTime">00:00</div>
     </div>
     <audio id="songFile"></audio>
-    <div class="playBar_item">
-        <div class="playBar_item-info">
-            <div class="playBar_item-img"><img class="playerBar_item-img--thumb" alt=""></div>
-            <div class="playerBar_item-name">
-                <div class="playerBar_item-name--nameSong">Crepp</div>
-                <div class="playerBar_item-name--nameArtist">Radiohead</div>
-            </div>
+    <div class="playerBar_item">
+      <div class="playerBar_item-info">
+        <div class="playerBar_item-img">
+          <img class="playerBar_item-img--thumb" alt="" />
         </div>
-        <div class="playBar_item-action">
-            <div class="random"><i class="fa-light fa-shuffle"></i></div>
-            <div class="back playerBar_item-action--size"><i class="fa-solid fa-backward-fast"></i></div>
-            <div id="pause" class="pause playerBar_item-action--pausesize"><i class="fa-solid fa-circle-play"></i></div>
-            <div class="next playerBar_item-action--size"><i class="fa-solid fa-forward-fast"></i></div>   
-            <div class="replay"><i class="fa-light fa-arrows-repeat"></i></div>
+        <div class="playerBar_item-name">
+          <div class="playerBar_item-name--nameSong">Creep</div>
+          <div class="playerBar_item-name--nameArtist">Radiohead</div>
         </div>
-        <div class="playBar_item-vol">
-            <div class="playerBar_item-vol--icon" onclick="muteVol()"><i class="fa-solid fa-volume-high"></i></div>
-            <div class="playerBar_item-vol--bar"><input type="range" name="" id="volRange" onchange="changevolume(this.value)"></div>
+      </div>
+      <div class="playerBar_item-action">
+        <div class="random"><i class="fa-light fa-shuffle"></i></div>
+        <div class="back playerBar_item-action--size">
+          <i class="fa-solid fa-backward-fast"></i>
         </div>
+        <div id="pause" class="pause playerBar_item-action--pausesize">
+          <i class="fa-solid fa-circle-play"></i>
+        </div>
+        <div class="next playerBar_item-action--size">
+          <i class="fa-solid fa-forward-fast"></i>
+        </div>
+        <div class="replay"><i class="fa-light fa-arrows-repeat"></i></div>
+      </div>
+      <div class="playerBar_item-vol">
+        <div class="playerBar_item-vol--icon" onclick="muteVol()">
+          <i class="fa-solid fa-volume-high"></i>
+        </div>
+        <div class="playerBar_item-vol--bar">
+          <input
+            type="range"
+            name=""
+            id="volRange"
+            onchange="changevolume(this.value)"
+          />
+        </div>
+      </div>
     </div>
   </div>
-  <script src="./main.js"></script>
-  <script src="./listsong.js"></script>
-
+  <script src="main.js"></script>
+  <script src="listsong.js"></script>
 </html>
