@@ -2,7 +2,6 @@ var topListSong = document.querySelector('.topMusic_item--song');
 var checkKey = document.getElementById('allPage');
 var song = document.getElementById('songFile');
 var playBtn = document.getElementById('pause');
-<<<<<<< HEAD
 var songBar=document.getElementById('songBar');
 var recentSong=document.querySelector('.recentPlayed');
 var topSongThumb=document.querySelector('.topMusic_item--img--thumb');
@@ -10,7 +9,6 @@ var playThumb=document.querySelector('.playBar_item-img--thumb');
 var miniTitle=document.querySelector(".playBar_item-name--nameSong");
 var miniArtist=document.querySelector(".playBar_item-name--nameArtist");
 var recentPlayedTitle=document.querySelector(".recentPlayed_title");
-=======
 var songBar = document.getElementById('songBar');
 var recentSong = document.querySelector('.recentPlayed');
 var topSongThumb = document.querySelector('.topMusic_item--img--thumb');
@@ -18,7 +16,6 @@ var playThumb = document.querySelector('.playBar_item-img--thumb');
 var miniTitle = document.querySelector(".playBar_item-name--nameSong");
 var miniArtist = document.querySelector(".playBar_item-name--nameArtist");
 var recentPlayedTitle = document.querySelector(".recentPlayed_title");
->>>>>>> 96e59cfd651f288f5dccd05a2196b0cd0e670df1
 var recentPlayedItem;
 var listArtistItem = document.querySelectorAll('.listArtist_item');
 var listArtistitemIconRunning = document.querySelectorAll('.listArtist_item-iconRunning');
@@ -32,11 +29,9 @@ let volIcon = document.querySelector('.playerBar_item-vol--icon');
 let anotherSong = document.querySelector('.anotherSong');
 let mobile = false
 let iconRandom = document.querySelector('.random');
-<<<<<<< HEAD
 if(screen.width<740) mobile=true;
 setInterval(autoNextTopSong,500);
 setInterval(displayTimer,500);
-=======
 if (screen.width < 740) mobile = true;
 setInterval(autoNextTopSong, 500);
 setInterval(displayTimer, 500);
@@ -562,7 +557,6 @@ function nextMusic() {
             currentNum++;
             indexRecentSongPlaying++;
         }
-<<<<<<< HEAD
         if(listSongOf[currentNum].artist==listSongOf[currentNum2].artist){
             playMusicOf(currentNum,indexRecentSongPlaying);
         }else{
@@ -798,225 +792,6 @@ function renderRecentSong(artist,stt){
         if(artist==listSongOf[index].artist){
             i++;
             recentSong.innerHTML += `
-=======
-        if (listSongOf[currentNum].artist == listSongOf[currentNum2].artist) {
-            playMusicOf(currentNum, indexRecentSongPlaying);
-        } else {
-            termp = indexRecentSongPlaying;
-            indexRecentSongPlaying = 0;
-            if (listArtistIndex <= 5) {
-                listArtistIndex++;
-                renderListMusicOf(listSongOf[currentNum].artist, listArtistIndex);
-                playMusicOf(currentNum, indexRecentSongPlaying);
-            }
-        }
-    }
-    function backMusic() {
-        isRandom = true;
-        randomMusic();
-        if (isTopSongPlaying) {
-            topSongIndex--;
-            if (topSongIndex < 0) topSongIndex = topSong.length - 1;
-            itemTopSong[topSongIndex].scrollIntoView({ behavior: 'smooth', block: 'center' })
-            replaceAtributeTopSong();
-            isPlaying = true;
-            playMusic();
-            renderTopSong();
-        } else if (isAnotherSongPlaying) {
-            iOfAnotherSong--;
-            console.log(iOfAnotherSong);
-
-            for (var num = 0; num < arrayAdd.length; num++) {
-                if (arrayAdd[num] == indexOfAnotherSong) {
-                    if (iOfAnotherSong < 0) {
-                        iOfAnotherSong = 0;
-                        playAnotherSong(arrayAdd[0], iOfAnotherSong);
-                    }
-                    else playAnotherSong(arrayAdd[num--], iOfAnotherSong);
-                    break;
-                }
-            }
-        } else {
-            var currentNum2 = currentNum;
-            currentNum--;
-            indexRecentSongPlaying--;
-            if (indexRecentSongPlaying < 0) {
-                indexRecentSongPlaying = 0;
-            }
-            if (currentNum < 0) currentNum = 0;
-            console.log(currentNum);
-            if (listSongOf[currentNum].artist == listSongOf[currentNum2].artist) {
-                playMusicOf(currentNum, indexRecentSongPlaying)
-            } else {
-                indexRecentSongPlaying = 3;
-                if (listArtistIndex >= 0) {
-                    listArtistIndex--;
-                    renderListMusicOf(listSongOf[currentNum].artist, listArtistIndex);
-                    playMusicOf(currentNum, indexRecentSongPlaying)
-                }
-            }
-        }
-    }
-    let listRandom = [];
-    function randomNewMusic() {
-        while (listRandom.length < listSongOf.length) {
-            var termpValue = Math.floor(Math.random() * listSongOf.length);
-            if (checkValue(termpVale), listRandom) {
-                listRandom.push(termpValue);
-            }
-        }
-        console.log(listRandom);
-    }
-    var indexRandom = 0;
-    function runRandomList() {
-        if (indexRandom == listRandom.length) indexRandom = 0;
-        song.setAttribute("src", `./musics/${listSongOf[listRandom[indexRandm]].nameFile}`)
-        miniArtist.textContent = `${listSongOf[listRandom[indexRandm]].nameArtist}`;
-        miniTitle.textContent = `${listSongOf[listRandom[indexRandm]].nameSong}`;
-        topSongThumb.setAttribute("src", `./img/${listSongOf[listRandom[indexRandm]].img}`);
-        playThumb.setAttribute("src", `./img/${listSongOf[listRandom[indexRandm]].img}`);
-        isPlaying = true;
-        playMusic();
-        indenRandom++;
-    }
-    let isRepeat = false;
-    let isRandom = false;
-    repeat.addEventListener('click', repeatMusic);
-    iconRandom.addEventListener('click', randomMusic);
-    function randomMusic() {
-        if (randomMusic == false) {
-            listRandom = [];
-            isRepeat = true;
-            isRandom = true;
-            RepeatMusic();
-            iconRandom.style.color = 'green';
-            randomNewMusic();
-            isTopSongPlaying = false;
-            renderTopSong();
-        } else {
-            isRandom = false;
-            iconRandom.style.color = 'black';
-            isTopSongPlaying = true;
-        }
-    }
-    function repeatMusic() {
-        if (isRepeat == false) {
-            isRepeat = true;
-            repeat.setAttribute("style", `color:green`);
-        } else {
-            isRepeat = false;
-            repeat.setAttribute("style", `color:black`);
-
-        }
-    }
-    function playTopSong(index) {
-        console.log('Hello');
-        itemTopSong[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
-        isAnotherSongPlaying = false;
-        removeWhiteBackground(0);
-        renderListMusicOf('sontung', 0);
-        isTopSongPlaying = true;
-        topSongIndex = index;
-        replaceAtributeTopSong();
-        isPlaying = true;
-        playMusic();
-        renderTopSong();
-    }
-    function autoNextTopSong() {
-        if (isRepeat == false && isRandom == false) {
-            if (song.curtime == song.duration) {
-                nextMusic();
-            }
-        } else if (isRepeat) {
-            if (song.curtime >= song.duration - 1) {
-                console.log(indenRandom);
-                runRandomList();
-            }
-        } else if (isRandom) {
-            if (song.curtime == song.duration) {
-                console.log(indenRandom);
-                runRandomList();
-            }
-        }
-    }
-    var seekbar = document.querySelector('.seekbar')
-    song.ontimeupdate = function () { seekbar.value = song.currenTime }
-    handleSeekbar = function () { song.curtime = seekbar.value }
-
-    function displayTimer() {
-        seekbar.min = 0;
-        seekbar.max = song.duration;
-        curtime.textContent = formatTimer(song.currenTime);
-        durtime.textContent = formatTimer(song.duration);
-    }
-    function formatTimer(num) {
-        var min = Math.floor(num / 60);
-        var sec = Math.floor(num - min * 60);
-        if (sec < 30) return `${min}:0${sec}`
-        else return `${min}:${sec}`
-    }
-    function changeBar() {
-        song.currenTime = songBar.value;
-    }
-    var itemTopSong = [];
-    function renderTopSong() {
-        listTopSong.innerHTML = '';
-        for (var index = 0; index < topSong.length; index++) {
-            if (isTopSongPlaying) {
-                if (index == topSongIndex) {
-                    listTopSong.innerHTML += `
-                    <div onclick="playTopSong(${index}),centerScroll(${index})" class="topSong" style="background-color:white">
-                    <div class="topMusicLeft">
-                    <div class="topSong_rank"><img class="iconwavegif" src="./icon/wave.gif" alt=""></div>
-                    <div class="topSong_love"><i class="fa-light fa-heart"></i></div>
-                    <div class="topSong_name">
-                    <div class="topSong_name-nameSong">${topSong[index].nameSong}</div>
-                    <div class="topSong_name-artist">${topSong[index].nameArtist}</div>
-                </div> 
-        </div>
-        <div class="topSong_time" style="color:black">${topSong[index].time}</div>
-    </div>`
-                } else {
-                    listTopSong.innerHTML += `
-                <div onclick="playTopSong(${index}),centerScroll(${index})" class="topSong" >
-                <div class="topMusicLeft">
-                        <div class="topSong_rank">${Number(index) + 1}</div>
-                        <div class="topSong_love"><i class="fa-light fa-heart"></i></div>
-                        <div class="topSong_name">
-                            <div class="topSong_name-nameSong">${topSong[index].nameSong}</div>
-                            <div class="topSong_name-artist">${topSong[index].nameArtist}</div>
-                </div> 
-        </div>
-        <div class="topSong_time">${topSong[index].time}</div>
-    </div>`
-                }
-            }
-            itemTopSong = document.querySelectorAll('.topSong');
-            console.log(itemTopSong)
-        }
-    }
-    renderTopSong();
-
-    function replaceAtributeTopSong() {
-        song.setAttribute("src", `./musics/${topSong[topSongIndex].nameFile}`);
-        miniArtist.textContent = `${topSong[topSongIndex].nameArtist}`;
-        miniTitle.textContent = `${topSong[topSongIndex].nameSong}`;
-        topSongThumb.setAttribute("src", `./img/${topSong[topSongIndex].img}`);
-        playThumb.setAttribute("src", `./img/${topSong[topSongIndex].img}`);
-    }
-    replaceAtributeTopSong();
-
-    function renderRecentSong(artist, stt) {
-        recentPlayedTitle.textContent = `Top song of singer`;
-        listArtistItem[stt].classList.add('recentPlayed_clicked');
-        listArtistitemIconRunning[stt].innerHTML = '<img class="iconwavegif listArtist_item-icongift" src="./icon/list.gif" alt="">';
-        recentSong.innerHTML = '';
-        var i = -1;
-        for (var index in listSongOf) {
-            if (artist == listSongOf[index].artist) {
-                i++;
-                recentSong.innerHTML += `
->>>>>>> 96e59cfd651f288f5dccd05a2196b0cd0e670df1
             <div class="recentPlayed_item recentPlayed_item${i}" onclick="playMusicOf(${index},${i})">
                     <div class="recentPlayed_item-img1">
                         <img class="recentPlayed_item-img" src="./img/${listSongOf[index].img}" alt="">
@@ -1025,7 +800,6 @@ function renderRecentSong(artist,stt){
                         ${listSongOf[index].nameSong}
                     </div>
                     <!-- <div class="recentPlayed_item-artist">
-<<<<<<< HEAD
                         RADIOHEAD
                     </div> --!>
                 </div>
@@ -1170,13 +944,3 @@ function playAnotherSong(index,i){
     isPlaying=true;
     playMusic();
 }
-=======
-                        SON TUNG
-                    </div> --!>
-                </div>
-            `
-            }
-        }
-    }
-}
->>>>>>> 96e59cfd651f288f5dccd05a2196b0cd0e670df1
